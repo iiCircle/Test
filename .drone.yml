@@ -8,3 +8,7 @@ steps:
   - ls
   - pwd
   - ls
+
+services:
+  redis:
+    image:redis
