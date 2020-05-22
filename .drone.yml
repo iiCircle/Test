@@ -1,10 +1,9 @@
----
-kind:pipeline
-name:default
+kind: pipeline
+name: default
 
 steps:
-- name:backend
-  image:golang
+- name: test
+  image: golang
   commands:
-  - ls
-  - pwd
+  - go test
+  - go build
