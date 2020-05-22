@@ -2,14 +2,14 @@ kind: pipeline
 name: default
 
 steps:
-- name: master
+- name: build
   image: golang
   environment:
     USERNAME:
       from_secret: username
     PASSWORD:
       from_secret: password
-  test1: this is test1
+  test1: hhhhh
   commands:
     - echo master
     - echo $USERNAME
