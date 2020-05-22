@@ -9,4 +9,4 @@ steps:
     - ls
     - pwd
     - ls
-    - echo API_TOKEN
+    - echo "API_TOKEN"
