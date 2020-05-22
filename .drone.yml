@@ -1,23 +1,20 @@
-kind: pipeline
-name: default
-
-steps:
-- name: build
-  image: golang
-  environment:
-    USERNAME:
-      from_secret: username
-    PASSWORD:
-      from_secret: password
-  test1: hhhhh
-  commands:
-    - echo master
-    - echo $USERNAME
-    - echo $PASSWORD
-    - echo ${PLUGIN_TEST1}
-    - echo ${TEST1}
-    - chmod +x build.sh
-    - ./build.sh
-
-
-
+---
+  kind: pipeline
+  name: centos-airtest
+  group: build
+  
+  steps:
+  - name: build
+    image: ubuntu-airtest:1.0
+    commands:
+      - pwd
+      - ls
+      - chmod +x build.sh
+      - ./build.sh
+    volumes:
+    - name: data
+      path: /data
+  volumes:
+  - name: data
+    host:
+      path: /home/circle/drone/data
