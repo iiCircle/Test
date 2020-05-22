@@ -4,11 +4,14 @@ name: default
 steps:
 - name: test
   image: golang
-  secrets: [ api_token ]
+  environment:
+    USERNAME:
+      from_secret: username
+    PASSWORD:
+      from_secret: password
   commands:
     - ls
     - pwd
     - ls
-    - echo "API_TOKEN"
-    - echo $API_TOKEN
-    - echo $api_token
+    - echo $USERNAME
+    - echo $PASSWORD
