@@ -11,4 +11,4 @@ steps:
 
 services:
   redis:
-    image:redis
+    image: redis
