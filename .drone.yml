@@ -13,19 +13,8 @@ steps:
     - echo master
     - echo $USERNAME
     - echo $PASSWORD
-  when:
-    branch: master
+  services:
+  - name: redis
+    image: redis
 
-- name: develop
-  image: golang
-  environment:
-    USERNAME:
-      from_secret: username
-    PASSWORD:
-      from_secret: password
-  commands:
-    - echo develop
-    - echo $USERNAME
-    - echo $PASSWORD
-  when:
-  branch: develop
+
