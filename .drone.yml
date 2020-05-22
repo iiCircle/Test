@@ -4,18 +4,18 @@ name: default
 steps:
 - name: build
   image: golang
-  # environment:
-  #   USERNAME:
-  #     from_secret: username
-  #   PASSWORD:
-  #     from_secret: password
+  environment:
+    USERNAME:
+      from_secret: username
+    PASSWORD:
+      from_secret: password
   test1: hhhhh
-  secrets: [ username ]
   commands:
     - echo master
     - echo $USERNAME
     - echo $PASSWORD
     - echo ${PLUGIN_TEST1}
+    - echo ${TEST1}
     - chmod +x build.sh
     - ./build.sh
 
