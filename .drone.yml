@@ -1,6 +1,6 @@
 ---
   kind: pipeline
-  name: centos-airtest
+  name: ubuntu-airtest
   group: build
   
   steps:
