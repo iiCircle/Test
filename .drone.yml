@@ -5,15 +5,9 @@
   
   steps:
   - name: build
-    image: ubuntu-airtest:1.0
+    image: golang
     commands:
       - pwd
       - ls
       - chmod +x build.sh
       - ./build.sh
-    volumes:
-    - name: data
-      path: /data
-  volumes:
-  - name: data
-    path: /home/circle/drone/data
