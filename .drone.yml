@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: test
+- name: master
   image: golang
   environment:
     USERNAME:
@@ -10,8 +10,22 @@ steps:
     PASSWORD:
       from_secret: password
   commands:
-    - ls
-    - pwd
-    - ls
+    - echo master
     - echo $USERNAME
     - echo $PASSWORD
+  when:
+    branch: master
+
+- name: develop
+  image: golang
+  environment:
+    USERNAME:
+      from_secret: username
+    PASSWORD:
+      from_secret: password
+  commands:
+    - echo develop
+    - echo $USERNAME
+    - echo $PASSWORD
+  when:
+  branch: develop
