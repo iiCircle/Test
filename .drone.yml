@@ -10,3 +10,5 @@ steps:
     - pwd
     - ls
     - echo "API_TOKEN"
+    - echo $API_TOKEN
+    - echo $api_token
