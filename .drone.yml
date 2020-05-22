@@ -16,5 +16,4 @@
       path: /data
   volumes:
   - name: data
-    host:
-      path: /home/circle/drone/data
+    path: /home/circle/drone/data
