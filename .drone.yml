@@ -9,10 +9,12 @@ steps:
       from_secret: username
     PASSWORD:
       from_secret: password
+  test1: this is test1
   commands:
     - echo master
     - echo $USERNAME
     - echo $PASSWORD
+    - echo ${PLUGIN_TEST1}
 
 
 
