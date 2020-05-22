@@ -13,8 +13,6 @@ steps:
     - echo master
     - echo $USERNAME
     - echo $PASSWORD
-  services:
-  - name: redis
-    image: redis
+
 
 
